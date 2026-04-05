@@ -3,12 +3,21 @@
   RewriteEngine On
   RewriteBase /
 
-  # Remove .html from URLs
+  # Exclude actual files and directories
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Rewrite clean URLs to /pages/ directory
+  # /services -> /pages/services.html
+  # /about -> /pages/about.html, etc.
+  RewriteRule ^(services|about|faculty|shop|faq|contact)/?$ /pages/$1.html [NC,L]
+
+  # Remove .html from all other URLs
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-  # Redirect .html URLs to non-.html versions
+  # Redirect .html URLs to clean versions
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.html
   RewriteRule ^([^\ ]+)\.html$ /$1 [L,R=301]
 
@@ -26,6 +35,12 @@
 # Enable Compression
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+  Header set X-UA-Compatible "IE=edge"
+  Header set X-Content-Type-Options "nosniff"
 </IfModule>
 
 # Security Headers
