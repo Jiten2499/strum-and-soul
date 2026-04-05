@@ -1,0 +1,80 @@
+/* ============================================================
+   STRUM & SOUL — Header / Navigation Styles
+   css/header.css  |  Loaded on every page via header.html include
+   ============================================================ */
+
+/* ─── LOGO ────────────────────────────────────────────────── */
+.logo { display: flex; align-items: center; gap: .65rem; }
+.logo-mark {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(192,68,26,.25);
+}
+.logo-text  { display: flex; flex-direction: column; line-height: 1.1; }
+.logo-name  { font-family: var(--ff-d); font-weight: 700; font-size: 1.1rem; color: var(--text); }
+.logo-sub   { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+
+/* ─── NAV BAR ────────────────────────────────────────────── */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  padding: .9rem 0;
+  transition: var(--tr);
+}
+.nav.scrolled {
+  background: rgba(251,246,239,0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-lt);
+  box-shadow: 0 1px 24px rgba(90,40,10,0.06);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+
+/* Desktop links */
+.nav-links { display: flex; align-items: center; gap: .25rem; }
+.nav-a {
+  padding: .42rem .9rem; border-radius: 8px;
+  font-size: .875rem; font-weight: 500;
+  color: var(--text2);
+  transition: var(--tr);
+}
+.nav-a:hover, .nav-a.active { color: var(--text); background: var(--accent-lt); }
+
+/* Hamburger */
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px;
+  padding: .4rem; cursor: pointer; background: none; border: none;
+}
+.nav-toggle span {
+  display: block; width: 22px; height: 2px;
+  background: var(--text); border-radius: 2px; transition: var(--tr);
+}
+.nav-toggle.open span:nth-child(1) { transform: rotate(45deg)  translate(5px, 5px); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+/* Mobile drawer */
+.nav-mob {
+  display: none; position: fixed; inset: 0;
+  background: rgba(251,246,239,0.98);
+  backdrop-filter: blur(20px);
+  z-index: 99; flex-direction: column; align-items: center;
+  justify-content: center; gap: .75rem;
+  opacity: 0; pointer-events: none; transition: opacity var(--tr);
+}
+.nav-mob.open { display: flex; opacity: 1; pointer-events: all; }
+.nav-mob .nav-a { font-size: 1.5rem; font-family: var(--ff-d); padding: .7rem 2rem; }
+.nav-mob-close {
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--bg2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 1rem; color: var(--text2); transition: var(--tr);
+}
+.nav-mob-close:hover { background: var(--bg3); }
+
+@media (max-width: 860px) {
+  .nav-links, .nav-cta-btn { display: none; }
+  .nav-toggle { display: flex; }
+}

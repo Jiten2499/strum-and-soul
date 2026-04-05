@@ -1,0 +1,56 @@
+<!-- ============================================================
+     STRUM & SOUL — Header Component
+     components/header.html
+
+     HOW TO USE:
+     Copy-paste this block at the top of every page's <body>.
+     Adjust the active class on the relevant .nav-a link.
+     ============================================================ -->
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="wrap">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="/index.html" class="logo" aria-label="Strum & Soul — Home">
+        <div class="logo-mark">🎸</div>
+        <div class="logo-text">
+          <span class="logo-name">Strum &amp; Soul</span>
+          <span class="logo-sub">Music Academy</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <!-- TIP: Add class="active" to the link matching the current page -->
+      <ul class="nav-links" role="list">
+        <li><a href="./pages/services.html" class="nav-a">Services</a></li>
+        <li><a href="./pages/about.html"  class="nav-a">About Us</a></li>
+        <li><a href="./pages/faculty.html"  class="nav-a">Faculty</a></li>
+        <li><a href="./pages/shop.html"     class="nav-a">Shop</a></li>
+        <li><a href="./pages/faq.html"      class="nav-a">FAQ</a></li>
+        <li><a href="./pages/contact.html"  class="nav-a">Contact</a></li>
+      </ul>
+
+      <!-- CTA -->
+      <a href="./pages/contact.html" class="btn btn-accent nav-cta-btn">Enroll Now</a>
+
+      <!-- Hamburger -->
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="nav-mob" id="navMob" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <button class="nav-mob-close" id="navClose" aria-label="Close menu">✕</button>
+  <a href="./pages/services.html" class="nav-a">Services</a>
+  <a href="./pages/about.html"  class="nav-a">About Us</a>
+  <a href="./pages/faculty.html"  class="nav-a">Faculty</a>
+  <a href="./pages/shop.html"     class="nav-a">Shop</a>
+  <a href="./pages/faq.html"      class="nav-a">FAQ</a>
+  <a href="./pages/contact.html"  class="nav-a">Contact</a>
+  <a href="./pages/contact.html"  class="btn btn-accent" style="margin-top:1.2rem">Enroll Now</a>
+</div>

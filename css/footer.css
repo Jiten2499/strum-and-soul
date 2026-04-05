@@ -1,0 +1,62 @@
+/* ============================================================
+   STRUM & SOUL — Footer Styles
+   css/footer.css  |  Loaded on every page via footer.html include
+   ============================================================ */
+
+.footer { background: var(--text); padding: 5rem 0 2rem; }
+
+.foot-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 3rem; margin-bottom: 4rem;
+}
+@media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+@media (max-width: 520px)  { .foot-grid { grid-template-columns: 1fr; } }
+
+/* Brand column */
+.foot-brand-desc {
+  font-size: .87rem; color: rgba(251,246,239,.45);
+  line-height: 1.7; margin: 1rem 0 1.4rem; max-width: 270px;
+}
+.foot-logo .logo-name { color: rgba(251,246,239,.9); }
+
+/* Column headings */
+.foot-h {
+  font-size: .68rem; font-weight: 700; letter-spacing: .2em;
+  text-transform: uppercase; color: rgba(251,246,239,.35);
+  margin-bottom: 1.1rem;
+}
+
+/* Links */
+.foot-links { display: flex; flex-direction: column; gap: .65rem; }
+.foot-a     { font-size: .87rem; color: rgba(251,246,239,.55); transition: color var(--tr); }
+.foot-a:hover { color: var(--accent2); }
+
+/* Contact info */
+.foot-ci { display: flex; align-items: flex-start; gap: .7rem; margin-bottom: .8rem; }
+.foot-ci-icon { color: var(--accent2); font-size: .85rem; margin-top: .15rem; flex-shrink: 0; }
+.foot-ci-text { font-size: .84rem; color: rgba(251,246,239,.5); }
+.foot-ci-text a { color: rgba(251,246,239,.5); transition: color var(--tr); }
+.foot-ci-text a:hover { color: var(--accent2); }
+
+/* Social icons */
+.foot-social { display: flex; gap: .55rem; margin-top: .5rem; }
+.foot-social-a {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .85rem; color: rgba(251,246,239,.45); transition: var(--tr);
+}
+.foot-social-a:hover { background: rgba(232,148,26,.2); color: var(--accent2); transform: translateY(-2px); }
+
+/* Bottom bar */
+.foot-bottom {
+  border-top: 1px solid rgba(255,255,255,.07);
+  padding-top: 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+}
+.foot-bottom p { font-size: .8rem; color: rgba(251,246,239,.3); }
+.foot-btm-links { display: flex; gap: 1.5rem; }
+.foot-btm-a { font-size: .8rem; color: rgba(251,246,239,.3); transition: color var(--tr); }
+.foot-btm-a:hover { color: rgba(251,246,239,.6); }
