@@ -38,12 +38,12 @@
 
 .svc-hero-inner {
   position: relative; z-index: 2;
-  padding: 6rem 0 5rem;
+  padding: 6rem 0 5rem 4rem;
   display: grid; grid-template-columns: 1fr auto;
   align-items: flex-end; gap: 4rem; width: 100%;
 }
 @media (max-width: 860px) {
-  .svc-hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .svc-hero-inner { grid-template-columns: 1fr; gap: 2rem; padding: 6rem 0 5rem 2rem; }
   .svc-hero-count { display: none; }
 }
 

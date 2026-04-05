@@ -37,11 +37,11 @@
   position: relative; z-index: 2;
   display: grid; grid-template-columns: 1fr 1fr;
   align-items: center; gap: 3rem;
-  padding: 8rem 0 5rem;
+  padding: 8rem 0 5rem 6rem;
   width: 100%;
 }
 @media (max-width: 860px) {
-  .hero-inner { grid-template-columns: 1fr; padding: 7rem 0 4rem; }
+  .hero-inner { grid-template-columns: 1fr; padding: 7rem 0 4rem 2rem; }
   .hero-right  { display: none; }
 }
 
