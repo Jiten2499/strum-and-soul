@@ -46,6 +46,9 @@
   .svc-hero-inner { grid-template-columns: 1fr; gap: 2rem; padding: 6rem 0 5rem 2rem; }
   .svc-hero-count { display: none; }
 }
+@media (max-width: 480px) {
+  .svc-hero-inner { padding: 5rem 0 3rem 0; }
+}
 
 .svc-hero-eyebrow {
   display: inline-flex; align-items: center; gap: .55rem;

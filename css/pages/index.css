@@ -8,6 +8,13 @@
   position: relative; min-height: 100vh;
   display: flex; align-items: center;
   overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+.hero .wrap {
+  padding: 0 1rem;
+  width: calc(100% - 2rem) !important;
+  overflow-x: hidden;
 }
 .hero-bg-img {
   position: absolute; inset: 0;
@@ -43,6 +50,10 @@
 @media (max-width: 860px) {
   .hero-inner { grid-template-columns: 1fr; padding: 7rem 0 4rem 2rem; }
   .hero-right  { display: none; }
+  .hero-card-stack { display: none; }
+}
+@media (max-width: 480px) {
+  .hero-inner { padding: 6rem 1rem 3rem 1rem; }
 }
 
 .hero-eyebrow {
